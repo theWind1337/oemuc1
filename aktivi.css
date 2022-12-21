@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bgs 
+{
+  background-image: url("oemuc-slika.jpg");
+  filter: brightness(50%);
+  position: absolute;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  z-index: -30;
+}
+ul
+{
+  list-style-type: none;
+  padding: 0;
+}
+.container .container-inner
+{
+  margin: 0 auto;
+  width: 100%;
+}
+.container
+{
+  max-width: 1350px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.container-inner
+{
+  max-width: 1000px;
+}
+nav
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em;
+  z-index: 9;
+  transition: 0.7s;
+  color: #5eb3b7;
+  background: rgba(0, 0, 0, 0.6);
+}
+.brand
+{
+  font-size: 1.6em;
+}
+nav .container-inner
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+nav .container ul
+{
+  width: 100%;
+  margin: 0 1em;
+}
+nav .container ul:nth-child(2)
+{
+  text-align: right;
+}
+nav .container ul li
+{
+  display: inline-block;
+  margin: 0 0.7em;
+}
+nav a
+{
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: 0.3s;
+  font-weight: 600;
+  color: #5eb3b7;
+}
+nav a:hover
+{
+  color: #f39520;
+}
+nav .fa-bars
+{
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: right;
+}
+nav .fa-bars:hover
+{
+  color: #f39520;
+}
+.menu
+{
+  background: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3em;
+  height: 0;
+  opacity: 0;
+  transition: 
+  0.7s
+  cubic-bezier(
+    .74,-0.03,.83,.67
+  );
+  overflow-y: hidden;
+}
+.logo
+{
+  width: 3em;
+}
+.menu ul, .menu form {
+  margin: 1em auto;
+}
+.menu li
+{
+  margin: 1em 0;
+}
+.menu > div
+{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 6em 1em 3em 1em;
+  height: 100%;
+  overflow-y: scroll;
+}
+.menu > div::-webkit-scrollbar
+{
+  display: none;
+}
+.menu .social-media
+{
+  margin: 2em 0;
+}
+.social-media li
+{
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+.menu-open
+{
+  height: 100vh;
+  opacity: 1;
+}
+.navbar-active
+{
+  background: #111;
+  padding: 1em;
+}
+.glavno{
+
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}  
+.slika{
+    height: 330px;
+    width: 240px;
+    transition: .5s;
+}
+
+.tekst2{
+    margin: 5px;
+    font-size: 19px;
+    font-weight: bold;
+}
+.container1{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   margin-top: 7000px;
+   margin-left: 160px;
+   column-gap: 60px;
+}
+.tekst1{
+    margin: 5px;
+    font-size: 19px;
+    font-weight: bold;
+}
+.card{
+    height: 328px;
+    margin: 50px;
+    margin-right: 40px;
+    box-shadow: 3px 3px 3px 17px black;
+    overflow: hidden;
+}
+.intro{
+    height: 80px;
+    width: 240px;
+    padding: 6px;
+    margin-top: 155px;
+    box-sizing: border-box;
+    position: relative;
+    background: rgb(27, 27, 27, .5);
+    color: white;
+    bottom: 240px;
+    transition: .5s;
+    align-items: center;
+    text-align: center;
+}
+.tekst{
+    margin: 5px;
+    font-size: 21px;
+    font-weight: bold;
+}
+.paragraf{
+    font-size: 17px;
+    margin-top: 0px;
+    visibility: hidden;
+    opacity: 0;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card:hover .intro{
+    height: 80px;
+    background: black;
+}
+.card:hover .paragraf{
+    opacity: 1;
+    visibility: visible
+}
+.card:hover .slika{
+    transform: scale(1.1) rotate(-3deg);
+}
+.active
+{
+    background: #292929;
+}
+@media screen and (max-width: 800px)
+{
+  nav .container-inner
+  {
+    display: none;
+  }
+  nav .container
+  {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 800px)
+{
+  .menu form
+  {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px)
+{
+  html
+  {
+    font-size: 13px;
+  }
+}
